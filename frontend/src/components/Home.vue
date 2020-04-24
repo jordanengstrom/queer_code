@@ -49,8 +49,13 @@ h1 {
 }
 
 .home {
-  /* https://webgradients.com/ */
+  /* https://webgradients.com/
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
