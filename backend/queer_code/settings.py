@@ -123,12 +123,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
-    os.path.join(BASE_DIR, "frontend/dist"),
+    os.path.join(BASE_DIR, "/Users/jordan/source/python_stuff/queer_code/queer_code/frontend/dist"),
 ]
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json')
+        'BUNDLE_DIR_NAME': '/Users/jordan/source/python_stuff/queer_code/queer_code/frontend/dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, '/Users/jordan/source/python_stuff/queer_code/queer_code/frontend', 'webpack-stats.json')
     }
 }
