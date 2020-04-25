@@ -121,14 +121,25 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+jordans = '/Users/jordan/source/python_stuff/queer_code/queer_code/frontend/dist'
+birdys = '/Users/Birdy/repos/jordan/queer_code/queer_code/frontend/dist'
+
+im_at_birdys = True
+frontend_dist = None
+
+if im_at_birdys:
+    frontend_dist = birdys
+else:
+    frontend_dist = jordans
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
-    os.path.join(BASE_DIR, "/Users/jordan/source/python_stuff/queer_code/queer_code/frontend/dist"),
+    os.path.join(BASE_DIR, frontend_dist),
 ]
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': '/Users/jordan/source/python_stuff/queer_code/queer_code/frontend/dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, '/Users/jordan/source/python_stuff/queer_code/queer_code/frontend', 'webpack-stats.json')
+        'BUNDLE_DIR_NAME': frontend_dist,
+        'STATS_FILE': os.path.join(BASE_DIR, frontend_dist.replace('/dist', ''), 'webpack-stats.json')
     }
 }
