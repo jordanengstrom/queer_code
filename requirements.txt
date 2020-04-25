@@ -28,7 +28,7 @@ djangorestframework==3.11.0
 docutils==0.15.2
 entrypoints==0.3
 Faker==3.0.0
-Flask==0.12
+Flask==1.0
 Flask-CacheControl==0.1.2
 Flask-Cors==3.0.2
 Flask-Script==2.0.6
