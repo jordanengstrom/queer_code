@@ -8,6 +8,9 @@ from .views import (
 
 
 url_patterns = [
-    path('/communities', CommunityListView.as_view(), name='communities-home'),
-    path()
+    path('', CommunityListView.as_view()),
+    path('create/', CommunityCreateView.as_view()),
+    path('<pk>/', CommunityDetailView.as_view()),
+    path('<pk>/update/', CommunityUpdateView.as_view()),
+    path('<pk>/delete/', CommunityDestroyView.as_view()),
 ]

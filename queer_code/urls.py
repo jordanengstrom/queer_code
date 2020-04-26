@@ -14,10 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
+# my view still renders it so I don't think this warning error is accurate
 from core.views import IndexTemplateView
+from .routers import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point"),
+    # path('api/', include(router.urls)),
 ]

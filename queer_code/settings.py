@@ -31,14 +31,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # shipped apps:
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # libraries:
     'rest_framework',
     'webpack_loader',
+
+    # my apps:
+    'communities',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +130,7 @@ STATIC_URL = '/static/'
 jordans = '/Users/jordan/source/python_stuff/queer_code/queer_code/frontend/dist'
 birdys = '/Users/Birdy/repos/jordan/queer_code/queer_code/frontend/dist'
 
-im_at_birdys = True
+im_at_birdys = False
 frontend_dist = None
 
 if im_at_birdys:

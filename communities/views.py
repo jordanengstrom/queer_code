@@ -7,24 +7,26 @@ from django.views.generic import (
     DeleteView,
 )
 from .models import Community
+from .serializers import CommunitySerializer
+
+# can do a Viewset here, but want to practice other ways of doing things
 
 
 class CommunityListView(ListView):
-    model = Community
-    context_object_name = 'communities'
-    ordering = ['name']
+    queryset = Community.objects.all()
+    serializer_class = CommunitySerializer
 
 
 class CommunityCreateView(CreateView):
-    model = Community
-    fields = ['name', 'description']
+    queryset = Community.objects.all()
+    serializer_class = CommunitySerializer
 
 
 class CommunityUpdateView(UpdateView):
-    model = Community
-    fields = ['name', 'description']
+    queryset = Community.objects.all()
+    serializer_class = CommunitySerializer
 
 
 class CommunityDeleteView(DeleteView):
-    model = Community
-    success_url = '/communities'
+    queryset = Community.objects.all()
+    serializer_class = CommunitySerializer
