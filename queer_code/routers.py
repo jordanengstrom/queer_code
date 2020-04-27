@@ -1,6 +1,6 @@
 from rest_framework import routers
-from communities.views import *
+from communities.views import CommunityViewSet
 
 
 router = routers.DefaultRouter()
-router.register(r'/communities', CommunityListView)
+router.register(r'community', CommunityViewSet)
