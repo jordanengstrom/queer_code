@@ -21,14 +21,31 @@ export default new vuex.Store({
   state: {},
   mutations: {},
   getters: {},
-  actions: {
-    getHome({ commit, dispatch }, payload) {
-      baseAPI
-        .get("/")
-        .then((res) => {
-          console.log("Successfully got 'Home'");
+  actions: {},
+  methods: {
+    getCommunities: function() {
+      this.loading = true;
+      this.$http
+        .get("/api/community/")
+        .then((response) => {
+          this.community = response.data;
+          this.loading = false;
         })
         .catch((err) => {
+          this.loading = false;
+          console.log(err);
+        });
+    },
+    getCommunity: function(id) {
+      this.loading = true;
+      this.$http
+        .get(`/api/community/${id}/`)
+        .then((response) => {
+          this.currentCommunity = response.data;
+          this.loading = false;
+        })
+        .catch((err) => {
+          this.loading = false;
           console.log(err);
         });
     }
