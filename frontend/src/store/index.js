@@ -18,13 +18,17 @@ var baseAPI = axios.create({
 vue.use(vuex);
 
 export default new vuex.Store({
-  state: {},
+  state: {
+    results: []
+  },
   mutations: {},
   getters: {},
   actions: {
     getCommunities({ commit, dispatch }, payload) {
-      baseAPI.get("communities/").then((response) => {
-        console.log(response);
+      axios.get(baseUrl + "communities/").then((response) => {
+        console.log("RESPONSE: " + response);
+        this.state.results = response.data;
+        console.log(this.state.response);
       });
     }
     //     this.community = response.data;

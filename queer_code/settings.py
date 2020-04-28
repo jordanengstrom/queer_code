@@ -25,7 +25,7 @@ SECRET_KEY = 'a-5(_sn%^znw+ov!@w%+3-&rhy-+ijt$e&do6(^%y=zp$f97!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -148,4 +148,11 @@ WEBPACK_LOADER = {
         'BUNDLE_DIR_NAME': frontend_dist,
         'STATS_FILE': os.path.join(BASE_DIR, frontend_dist.replace('/dist', ''), 'webpack-stats.json')
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
 }

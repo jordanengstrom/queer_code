@@ -22,6 +22,6 @@ from .routers import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
     re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point"),
-    path('*', include(router.urls)),
 ]
