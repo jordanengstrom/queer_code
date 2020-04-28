@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <h1>&#127752; Find your people, or branch out! &#129412;</h1>
+          <h1>&#127752; Overflow section! &#129412;</h1>
         </div>
       </div>
       <div class="row">
@@ -17,13 +17,13 @@
     <Footer></Footer>
   </div>
 </template>
- 
+
 <script>
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default {
-  name: "Communities",
+  name: "Overflow",
 
   data() {
     return {};

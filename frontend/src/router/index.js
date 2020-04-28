@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/components/Home";
-import Communities from "@/components/Communities";
+import Communities from "@/components/Communities.vue";
 import Careers from "@/components/Careers";
+import Overflow from "@/components/Overflow";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ const routes = [
     path: "/communities",
     name: "Communities",
     component: Communities
+  },
+  {
+    path: "/overflow",
+    name: "Overflow",
+    component: Overflow
   },
   {
     path: "/careers",

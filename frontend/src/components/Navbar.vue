@@ -1,27 +1,32 @@
 <template>
   <div>
-    <!-- TODO: remove underlines when hovering over links. It's gross. -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <router-link :to="{name: 'Home'}">
-              <span class="nav-link" href="#">{Home}</span>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link :to="{name: 'Communities'}">
-              <span class="nav-link" href="#">{Communities}</span>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link :to="{name: 'Careers'}">
-              <span class="nav-link" href="#">{Careers}</span>
-            </router-link>
-          </li>
-        </ul>
-        <div id="triangle"></div>
-      </div>
+      <!-- I removed this div because the navbar disappears when you open chrome dev tools -->
+      <!-- <div class="collapse navbar-collapse" id="navbarText"> -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <router-link :to="{name: 'Home'}">
+            <span class="nav-link" href="#">{Home}</span>
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{name: 'Communities'}">
+            <span class="nav-link" href="#">{Communities}</span>
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{name: 'Overflow'}">
+            <span class="nav-link" href="#">{Overflow}</span>
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{name: 'Careers'}">
+            <span class="nav-link" href="#">{Careers}</span>
+          </router-link>
+        </li>
+      </ul>
+      <div id="triangle"></div>
+      <!-- </div> -->
     </nav>
   </div>
 </template>
