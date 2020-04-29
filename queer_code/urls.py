@@ -22,7 +22,6 @@ from .routers import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # COME BACK TO THIS
     path('', include(router.urls)),
     re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point"),
 ]

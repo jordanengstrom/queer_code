@@ -10,7 +10,12 @@
       <div class="row">
         <div class="col-sm-1">size 1</div>
         <!-- Community ideas: languages, Data Science, DevOps, InfoSec, WebDev, Databases, Gaming, Non-tech discourse,  -->
-        <div class="col-sm-10">size 10</div>
+        <div class="col-sm-10">
+          <span>size 10</span>
+          <ul>
+            <li v-for="c in communities" v-bind:key="c.name">{{ c.name }}</li>
+          </ul>
+        </div>
         <div class="col-sm-1">size 1</div>
       </div>
     </div>
@@ -27,7 +32,8 @@ export default {
 
   data() {
     return {
-      results: null
+      // Come back to this
+      communities: []
     };
   },
 
@@ -37,7 +43,7 @@ export default {
   },
 
   mounted() {
-    this.results = this.$store.dispatch("getCommunities");
+    this.communities = this.$store.dispatch("getCommunities");
   }
 };
 </script>
