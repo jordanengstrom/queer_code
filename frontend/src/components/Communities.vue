@@ -31,10 +31,7 @@ export default {
   name: "Communities",
 
   data() {
-    return {
-      // Come back to this
-      // communities: []
-    };
+    return {};
   },
 
   components: {
