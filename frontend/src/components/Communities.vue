@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       // Come back to this
-      communities: []
+      // communities: []
     };
   },
 
@@ -43,7 +43,13 @@ export default {
   },
 
   mounted() {
-    this.communities = this.$store.dispatch("getCommunities");
+    this.$store.dispatch("getCommunities");
+  },
+
+  computed: {
+    communities() {
+      return this.$store.state.results;
+    }
   }
 };
 </script>
