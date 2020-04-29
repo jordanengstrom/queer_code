@@ -19,16 +19,16 @@ vue.use(vuex);
 
 export default new vuex.Store({
   state: {
-    results: []
+    results: null
   },
   mutations: {},
   getters: {},
   actions: {
     getCommunities({ commit, dispatch }, payload) {
       axios.get(baseUrl + "communities/").then((response) => {
-        console.log("RESPONSE: " + response);
+        console.log("RESPONSE: " + response.data);
         this.state.results = response.data;
-        console.log(this.state.response);
+        console.log(this.state.results);
       });
     }
     //     this.community = response.data;

@@ -26,7 +26,9 @@ export default {
   name: "Communities",
 
   data() {
-    return {};
+    return {
+      results: null
+    };
   },
 
   components: {
@@ -35,7 +37,7 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch("getCommunities");
+    this.results = this.$store.dispatch("getCommunities");
   }
 };
 </script>
