@@ -13,7 +13,7 @@
         <div class="col-sm-10">
           <span>size 10</span>
           <ul>
-            <li v-for="c in communities" v-bind:key="c.name">{{ c.name }}</li>
+            <li v-for="c in communities" v-bind:key="c.id">{{ c.name }} - {{ c.description }}</li>
           </ul>
         </div>
         <div class="col-sm-1">size 1</div>
