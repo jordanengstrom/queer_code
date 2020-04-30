@@ -21,7 +21,7 @@
         </li>
         <li class="nav-item">
           <router-link :to="{name: 'Careers'}">
-            <span class="nav-link" href="#">{Job Postings}</span>
+            <span class="nav-link" href="#">{Jobs}</span>
           </router-link>
         </li>
       </ul>
@@ -78,7 +78,8 @@ li {
   transition: transform 0.2s;
 }
 
-li:hover {
-  transform: scale(1.05);
-}
+/* li:hover {
+  transform: scale(1.025);
+  transform-origin: left top;
+} */
 </style>
