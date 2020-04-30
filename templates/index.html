@@ -12,14 +12,14 @@
       crossorigin="anonymous"
     />
     <style>
-      body,
-      html {
+      html,
+      body {
+        margin: 0;
         height: 100%;
-        /* overflow-y: scroll; */
       }
     </style>
   </head>
-  <body>
+  <body class="container-fluid">
     <div id="app"></div>
     {% render_bundle 'app' %}
     <script
