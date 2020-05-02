@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'webpack_loader',
 
     # my apps:
+    'articles',
     'communities',
 ]
 

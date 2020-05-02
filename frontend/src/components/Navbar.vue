@@ -20,7 +20,7 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{name: 'Careers'}">
+          <router-link :to="{name: 'Jobs'}">
             <span class="nav-link" href="#">{Jobs}</span>
           </router-link>
         </li>
