@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .comms {
   background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-  height: 100vh;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
