@@ -47,7 +47,7 @@ export default {
 
   computed: {
     communities() {
-      return this.$store.state.results;
+      return this.$store.state.communities;
     }
   }
 };

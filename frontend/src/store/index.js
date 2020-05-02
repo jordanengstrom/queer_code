@@ -19,7 +19,8 @@ vue.use(vuex);
 
 export default new vuex.Store({
   state: {
-    results: []
+    communities: [],
+    articles: []
   },
   mutations: {},
   getters: {},
@@ -28,34 +29,24 @@ export default new vuex.Store({
       axios
         .get(baseUrl + "communities/")
         .then((response) => {
-          this.state.results = response.data;
-          console.log(this.state.results);
+          this.state.communities = response.data;
+          // console.log(this.state.communities);
         })
         .catch((err) => {
-          this.loading = false;
+          console.log(err);
+        });
+    },
+    getArticles({ commit, dispatch }, payload) {
+      axios
+        .get(baseUrl + "articles/")
+        .then((response) => {
+          this.state.articles = response.data;
+          console.log(this.state.articles);
+        })
+        .catch((err) => {
           console.log(err);
         });
     }
-    //     this.community = response.data;
-    //     this.loading = false;
-    // .catch((err) => {
-    //   this.loading = false;
-    //   console.log(err);
-    // });
   },
-  //   getCommunity: function(id) {
-  //     this.loading = true;
-  //     this.$http
-  //       .get(`/api/community/${id}/`)
-  //       .then((response) => {
-  //         this.currentCommunity = response.data;
-  //         this.loading = false;
-  //       })
-  //       .catch((err) => {
-  //         this.loading = false;
-  //         console.log(err);
-  //       });
-  //   }
-  // },
   methods: {}
 });
