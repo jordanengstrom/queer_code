@@ -17,9 +17,11 @@
   <!-- TODO: Community outreach -->
   <!-- TODO: Alternative themes -->
   <!-- TODO: Put a disco ball somewhere -->
+
   <div class="home">
     <Navbar></Navbar>
     <div>
+      <!-- TODO: turn the home page into a feed -->
       <h1>queer_code home page</h1>
     </div>
     <Footer></Footer>
