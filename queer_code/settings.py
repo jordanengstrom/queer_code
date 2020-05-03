@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # django user apps:
+    'users.apps.UsersConfig',
+
     # libraries:
+    'crispy_forms',
     'rest_framework',
     'webpack_loader',
 

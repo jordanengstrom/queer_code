@@ -9,7 +9,6 @@
       </div>
       <div class="row">
         <div class="col-sm-1">size 1</div>
-        <!-- Community ideas: languages, Data Science, DevOps, InfoSec, WebDev, Databases, Gaming, Non-tech discourse,  -->
         <div class="col-sm-10">size 10</div>
         <div class="col-sm-1">size 1</div>
       </div>
@@ -43,7 +42,7 @@ export default {
 <style scoped>
 .comms {
   background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-  height: 100%;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
