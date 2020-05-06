@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="row community-row">
-        <div class="col-sm-3 card" v-for="c in communities" v-bind:key="c.id">
+        <div class="col-sm-3 comm-card card" v-for="c in communities" v-bind:key="c.id">
           <h3>{{ c.name }}</h3>
           <h5>{{ c.description }}</h5>
         </div>
@@ -55,10 +55,10 @@ export default {
   background-size: cover;
 }
 
-/* .containter-fluid {
-  display: flex; 
-  justify-content: center;
-} */
+.comm-card {
+  width: 10rem;
+  margin: 1.5rem 2.5rem 1.5rem 2.5rem;
+}
 
 .community-row {
   justify-content: space-around;
