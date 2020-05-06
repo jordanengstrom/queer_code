@@ -7,18 +7,11 @@
           <h1>&#127752; Find your people, or branch out! &#129412;</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <!-- Community ideas: languages, Data Science, DevOps, InfoSec, WebDev, Databases, Gaming, Non-tech discourse,  -->
-        <div class="col-sm-10">
-          <ul>
-            <li style="list-style-type:none" v-for="c in communities" v-bind:key="c.id">
-              <h3>{{ c.name }}</h3>
-              <h5>{{ c.description }}</h5>
-            </li>
-          </ul>
+      <div class="row community-row">
+        <div class="col-sm-3 card" v-for="c in communities" v-bind:key="c.id">
+          <h3>{{ c.name }}</h3>
+          <h5>{{ c.description }}</h5>
         </div>
-        <div class="col-sm-1"></div>
       </div>
     </div>
     <Footer></Footer>
@@ -61,18 +54,15 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.containter-fluid {
-  display: flex;
+
+/* .containter-fluid {
+  display: flex; 
   justify-content: center;
+} */
+
+.community-row {
+  justify-content: space-around;
 }
-/* .row {
-  border: 2px solid black;
-} */
-/* .col-sm-12, */
-/* .col-sm-10,
-.col-sm-1 {
-  border: 2px solid black;
-} */
 
 #grid-back {
   background-image: radial-gradient(#d9dbdb, 1px, transparent 0);

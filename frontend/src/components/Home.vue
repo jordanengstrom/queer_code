@@ -71,24 +71,13 @@ export default {
 
 <style scoped>
 .container-fluid {
-  /* display: flex; */
-  /* justify-content: space-between; */
   background-image: radial-gradient(#d9dbdb, 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
 }
 
-/* .row {
-  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
 .home {
   background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-  /* height: 100%; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,12 +88,11 @@ export default {
   margin-bottom: 3rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  /* width: 15rem; */
 }
 
-/* .article-row {
-  justify-content: space-between;
-} */
+.article-row {
+  justify-content: center;
+}
 
 h1 {
   font-weight: 700;
