@@ -2,7 +2,7 @@
   <div class="comms">
     <Navbar></Navbar>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" id="grid-back">
         <div class="col-sm-12">
           <h1>&#127752; Find your people, or branch out! &#129412;</h1>
         </div>
@@ -69,9 +69,15 @@ export default {
   border: 2px solid black;
 } */
 /* .col-sm-12, */
-.col-sm-10,
+/* .col-sm-10,
 .col-sm-1 {
   border: 2px solid black;
+} */
+
+#grid-back {
+  background-image: radial-gradient(#d9dbdb, 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
 }
 
 h1 {
