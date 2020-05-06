@@ -3,6 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- I removed this div because the navbar disappears when you open chrome dev tools -->
       <!-- <div class="collapse navbar-collapse" id="navbarText"> -->
+      <div id="triangle"></div>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <router-link :to="{name: 'Home'}">
@@ -25,8 +26,8 @@
           </router-link>
         </li>
       </ul>
-      <div id="triangle"></div>
       <!-- </div> -->
+      <div id="circle"></div>
     </nav>
   </div>
 </template>
@@ -73,7 +74,16 @@ span {
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 100px solid #ffdde1;
+  margin-right: 1rem;
 }
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: #d9dbdb;
+  border-radius: 50%;
+}
+
 li {
   transition: transform 0.2s;
 }
