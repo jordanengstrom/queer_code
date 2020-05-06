@@ -24,10 +24,12 @@
     <div class="container-fluid">
       <!-- TODO: turn the home page into a feed -->
       <div class="row">
-        <h1>queer_code home page</h1>
+        <div class="col-sm-12">
+          <h1>queer_code home page</h1>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4 card" v-for="a in articles" v-bind:key="a.id">
+      <div class="row article-row">
+        <div class="col-sm-6 card" v-for="a in articles" v-bind:key="a.id">
           <div class="article-unit">
             <h3>{{ a.title }}</h3>
             <h5>By: {{ a.author }}</h5>
@@ -69,8 +71,8 @@ export default {
 
 <style scoped>
 .container-fluid {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   background-image: radial-gradient(#d9dbdb, 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
@@ -99,6 +101,10 @@ export default {
   margin-right: 2rem;
   /* width: 15rem; */
 }
+
+/* .article-row {
+  justify-content: space-between;
+} */
 
 h1 {
   font-weight: 700;
