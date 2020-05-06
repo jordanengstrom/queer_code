@@ -22,19 +22,17 @@
   <div class="home">
     <Navbar></Navbar>
     <div class="container-fluid">
-      <div id="grid-back">
-        <!-- TODO: turn the home page into a feed -->
+      <!-- TODO: turn the home page into a feed -->
+      <div class="row">
         <h1>queer_code home page</h1>
-        <div class="row">
-          <div style="list-style-type:none" v-for="a in articles" v-bind:key="a.id">
-            <div class="col-sm-3">
-              <div class="article-unit">
-                <h3>{{ a.title }}</h3>
-                <h5>By: {{ a.author }}</h5>
-                <p>{{ a.content }}</p>
-                <span>Published on {{ a.created_date }}</span>
-              </div>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 card" v-for="a in articles" v-bind:key="a.id">
+          <div class="article-unit">
+            <h3>{{ a.title }}</h3>
+            <h5>By: {{ a.author }}</h5>
+            <p>{{ a.content }}</p>
+            <span>Published on {{ a.created_date }}</span>
           </div>
         </div>
       </div>
@@ -70,31 +68,37 @@ export default {
 </script>
 
 <style scoped>
-#grid-back {
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
   background-image: radial-gradient(#d9dbdb, 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
 }
 
-.row {
+/* .row {
   background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
   height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.home {
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  /* height: 100%; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.home {
-  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* 
 .article-unit {
-  width: 10rem;
-} */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  /* width: 15rem; */
+}
 
 h1 {
   font-weight: 700;
