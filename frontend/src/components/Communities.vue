@@ -56,8 +56,12 @@ export default {
 }
 
 .comm-card {
-  width: 10rem;
+  /* width: 30rem; */
   margin: 1.5rem 2.5rem 1.5rem 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .community-row {
