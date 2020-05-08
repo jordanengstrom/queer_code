@@ -23,12 +23,12 @@
     <Navbar></Navbar>
     <div class="container-fluid">
       <!-- TODO: turn the home page into a feed -->
-      <div class="row">
+      <div class="row row-margin-override">
         <div class="col-sm-12">
           <h1>queer_code home page</h1>
         </div>
       </div>
-      <div class="row article-row">
+      <div class="row article-row row-margin-override">
         <div class="col-sm-5 card" v-for="a in articles" v-bind:key="a.id">
           <div class="article-unit">
             <h3>{{ a.title }}</h3>
@@ -91,7 +91,7 @@ export default {
   margin-right: 2rem;
 }
 
-.margin-override {
+.row-margin-override {
   margin-left: 0px;
   margin-right: 0px;
 }
