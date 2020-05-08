@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="row article-row">
-        <div class="col-sm-6 card" v-for="a in articles" v-bind:key="a.id">
+        <div class="col-sm-5 card" v-for="a in articles" v-bind:key="a.id">
           <div class="article-unit">
             <h3>{{ a.title }}</h3>
             <h5>By: {{ a.author }}</h5>
@@ -74,6 +74,7 @@ export default {
   background-image: radial-gradient(#d9dbdb, 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
+  background-size: 100%;
 }
 
 .home {
@@ -88,6 +89,11 @@ export default {
   margin-bottom: 3rem;
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.margin-override {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .article-row {
