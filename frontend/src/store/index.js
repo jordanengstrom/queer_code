@@ -2,7 +2,6 @@ import vue from "vue";
 import vuex from "vuex";
 import axios from "axios";
 import router from "../router/index";
-
 var baseUrl = "http://127.0.0.1:8000/";
 
 var auth = axios.create({
@@ -46,6 +45,12 @@ export default new vuex.Store({
         .catch((err) => {
           console.log(err);
         });
+    },
+    getUser({ commit, dispatch }, payload) {
+      axios.get(baseUrl + "users/{user.id}").then((response) => {
+        this.state.user = response.data;
+        console.log(this.state.users);
+      });
     }
   },
   methods: {}

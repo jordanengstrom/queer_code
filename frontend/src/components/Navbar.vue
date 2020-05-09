@@ -38,7 +38,16 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+
+  mounted() {
+    this.$store.dispatch("getUser");
+  },
+
+  computed: {
+    articles() {
+      return this.$store.state.user;
+    }
+  }
 };
 </script>
 
