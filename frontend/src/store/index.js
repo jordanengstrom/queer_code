@@ -46,7 +46,7 @@ export default new vuex.Store({
           console.log(err);
         });
     },
-    getUser({ commit, dispatch }, payload) {
+    getActiveUser({ commit, dispatch }, payload) {
       axios.get(baseUrl + "users/{user.id}").then((response) => {
         this.state.user = response.data;
         console.log(this.state.users);
