@@ -9,5 +9,8 @@ class Community(models.Model):
     description = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
 
+    class Meta:
+        verbose_name_plural = 'Communities'
+
     def __str__(self):
         return self.name

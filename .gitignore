@@ -78,10 +78,11 @@ cover/
 *.pot
 
 # Django stuff:
-# *.log
-# local_settings.py
-# db.sqlite3
-# db.sqlite3-journal
+ *.log
+ local_settings.py
+ db.sqlite3
+ db.sqlite3-journal
+ */migrations/
 
 # Flask stuff:
 instance/
@@ -158,15 +159,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

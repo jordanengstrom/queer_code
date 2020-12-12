@@ -38,18 +38,28 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     # django user apps:
-    'users.apps.UsersConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    'rest_auth',
+    'rest_auth.registration',
 
     # libraries:
     'crispy_forms',
-    'rest_framework',
     'webpack_loader',
 
     # my apps:
+    'users',
     'articles',
     'communities',
+    'subcommunities',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +136,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = 'accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -143,6 +156,19 @@ if im_at_birdys:
 else:
     frontend_dist = jordans
 
+# For Custom User Model
+AUTH_USER_MODEL = 'users.CustomUser'
+
+# For Django crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# For django.contrib.sites
+SITE_ID = 1
+
+# For django-allauth
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_EMAIL_REQUIRED = True
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
     os.path.join(BASE_DIR, frontend_dist),
@@ -159,5 +185,11 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
-    ]
+    ],
+    'DEFAULT_ATHENTICATION_CLASSES': ('rest_framework.authentication.TokentAuthentication',
+                                      'rest_framework.authentication.SessionAuthentication',),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',)
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

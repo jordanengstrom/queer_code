@@ -19,7 +19,8 @@ vue.use(vuex);
 export default new vuex.Store({
   state: {
     communities: [],
-    articles: []
+    articles: [],
+    profiles: [],
   },
   mutations: {},
   getters: {},
@@ -47,10 +48,18 @@ export default new vuex.Store({
         });
     },
     getActiveUser({ commit, dispatch }, payload) {
-      axios.get(baseUrl + "users/{user.id}").then((response) => {
+      axios.get(baseUrl + "users/").then((response) => {
         this.state.user = response.data;
         console.log(this.state.users);
       });
+    },
+    getUserRegistrationForm({commit, dispatch}, payload) {
+      axios.get(baseUrl + "register/").then((response) => {
+        console.log("Here is the user registration page")
+      })
+      .catch((err) => {
+        console.log(err);
+        });
     }
   },
   methods: {}

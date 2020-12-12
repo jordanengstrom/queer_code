@@ -1,0 +1,3 @@
+django auth pip installs:
+
+$ pip install django-rest-auth django-allauth django-registration django-crispy-forms

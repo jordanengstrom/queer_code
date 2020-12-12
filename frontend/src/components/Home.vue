@@ -91,6 +91,10 @@ export default {
   margin-right: 2rem;
 }
 
+/* Even though my rows are in a container-fluid, there is still extra 
+whitespace that causes the horizontal scrollbar to show up in the browser. 
+If this is removed, these two values will to Bootstraps default value of 
+-15px */
 .row-margin-override {
   margin-left: 0px;
   margin-right: 0px;
